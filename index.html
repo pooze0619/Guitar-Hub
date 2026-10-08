@@ -1,1 +1,243 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guitar Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans KR", sans-serif;
+            background: #151515;
+            color: white;
+        }
+
+        header {
+            padding: 55px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #8B5A2B, #5c351d);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 12px;
+            color: #eeeeee;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        .section {
+            background: #222222;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 25px;
+        }
+
+        .rank {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #2d2d2d;
+            padding: 15px 18px;
+            margin: 10px 0;
+            border-radius: 12px;
+        }
+
+        .rank-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .number {
+            width: 35px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .username {
+            font-weight: bold;
+        }
+
+        .points {
+            color: #e4a15b;
+            font-weight: bold;
+        }
+
+        .stock {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stock-card {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+        .stock-name {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .stock-price {
+            margin-top: 12px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .up {
+            color: #4caf50;
+        }
+
+        .down {
+            color: #f44336;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .stock {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎸 Guitar Hub</h1>
+    <p>Guitar Hub 경제 시스템</p>
+</header>
+
+<div class="container">
+
+    <!-- 포인트 리더보드 -->
+    <div class="section">
+        <h2>🪙 포인트 리더보드</h2>
+
+        <div class="rank">
+            <div class="rank-left">
+                <div class="number">🥇</div>
+                <div class="username">GuitarMaster</div>
+            </div>
+            <div class="points">12,500 P</div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-left">
+                <div class="number">🥈</div>
+                <div class="username">GuitarPlayer</div>
+            </div>
+            <div class="points">9,840 P</div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-left">
+                <div class="number">🥉</div>
+                <div class="username">MusicLover</div>
+            </div>
+            <div class="points">7,320 P</div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-left">
+                <div class="number">4</div>
+                <div class="username">GuitarFan</div>
+            </div>
+            <div class="points">6,210 P</div>
+        </div>
+
+        <div class="rank">
+            <div class="rank-left">
+                <div class="number">5</div>
+                <div class="username">Acoustic</div>
+            </div>
+            <div class="points">5,850 P</div>
+        </div>
+    </div>
+
+
+    <!-- 주식 -->
+    <div class="section">
+        <h2>📈 Guitar Hub 주식</h2>
+
+        <div class="stock">
+
+            <div class="stock-card">
+                <div class="stock-name">🎸 FENDER</div>
+                <div class="stock-price">200 P</div>
+                <div class="up">▲ +3.2%</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">🍎 APPLE</div>
+                <div class="stock-price">350 P</div>
+                <div class="down">▼ -1.4%</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">💻 MICROSOFT</div>
+                <div class="stock-price">300 P</div>
+                <div class="up">▲ +2.1%</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">📦 AMAZON</div>
+                <div class="stock-price">280 P</div>
+                <div class="up">▲ +1.8%</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">🚗 TESLA</div>
+                <div class="stock-price">250 P</div>
+                <div class="down">▼ -2.7%</div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    🎸 Guitar Hub 개발팀
+    <br>
+    Guitar Hub 내부 가상 경제 시스템
+</footer>
+
+</body>
+</html>
+```
 
